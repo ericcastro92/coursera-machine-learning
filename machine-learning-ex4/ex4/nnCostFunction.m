@@ -111,8 +111,6 @@ for t = 1:m
   Delta2 = Delta2 + (delta3 * a2');
 end
 
-disp(size(Theta1))
-disp(size(Theta1(:,2:end)))
 Theta1_grad = ((1 / m) * Delta1) + ((lambda/m) * [zeros(size(Theta1), 1) Theta1(:,2:end)]);
 Theta2_grad = ((1 / m) * Delta2) + ((lambda/m) * [zeros(size(Theta2), 1) Theta2(:,2:end)]);
 
